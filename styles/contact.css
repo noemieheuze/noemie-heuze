@@ -1,0 +1,177 @@
+main {
+  gap: 160px !important;
+}
+.contact-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  height: 30dvh;
+}
+.contact-hero h1 {
+  font-size: var(--heading-1);
+  font-weight: 400;
+  line-height: 1.3;
+}
+.contact-content {
+  display: flex;
+  align-items: flex-end;
+}
+.contact-content__card-wrapper {
+  flex: 1;
+}
+.business-card {
+  position: initial !important;
+  top: inherit;
+  left: initial;
+  width: max-content;
+  transform: none;
+}
+form {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+}
+
+.fields-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Label au‑dessus du champ */
+form label {
+  display: block;
+  font-size: var(--body-2);
+  color: var(--color-text-fade);
+  margin-bottom: 0.25rem;
+}
+
+/* Styles communs aux inputs et textarea */
+form input,
+form textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid var(--color-primary);
+  background: transparent;
+  font: inherit;
+  padding: 0.5rem 0;
+  margin-bottom: 1.5rem;
+  outline: none;
+}
+
+/* Placeholder plus léger */
+form input::placeholder,
+form textarea::placeholder {
+  color: var(--color-text-fade);
+  opacity: 0.7;
+}
+
+/* Textarea taille ajustable verticalement */
+form textarea {
+  resize: vertical;
+height: 3rem;
+}
+
+/* Bouton d’envoi aligné bas‑droite */
+form button[type="submit"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-end;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  font-size: var(--body-1);
+  border-radius: 2rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  border:1px solid var(--color-bg);
+}
+form button[type="submit"] div {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+  /* si ton .cta-default ajoute un carré décoratif, ajuste ici */
+}
+form button[type="submit"]:hover {
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+
+}
+form button[type="submit"]:hover.cta-default span{
+      color: var(--color-primary) !important;
+}
+form button[type="submit"]:hover.cta-default svg path {
+    fill: var(--color-primary)
+}
+/* ABOUT COORDONNES */
+.about-coordonnes {
+  display: flex;
+  justify-content: space-between;
+}
+.about-coordonnes h2 {
+  flex: 1;
+  max-width: initial !important;
+}
+.about-coordonnes__content {
+  flex: 1.5;
+  font-size: var(--heading-4);
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  gap: 24px
+}
+.about-coordonnes a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+.about-coordonnes__content div {
+    border-bottom: 1px solid var(--color-primary);
+    padding-bottom: 8px;
+    display: flex;
+    gap: 56px
+}
+.about-coordonnes__content div span {
+    font-size: var(--body-1);
+    font-weight: 300;
+    width: 109px;
+}
+.about-coordonnes__content div a {
+    font-size: var(--cta);
+}
+
+
+/* ABOUT SOCIALS */
+.about-socials {
+  display: flex;
+  justify-content: space-between;
+}
+.about-socials h2 {
+  flex: 1;
+  max-width: initial !important;
+}
+.about-socials__content {
+  flex: 1.5;
+  font-size: var(--heading-4);
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  gap: 24px
+}
+.about-socials a {
+  color: var(--color-primary);
+}
+.about-socials__content a {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+.about-socials__content span {
+    font-size: var(--heading-4);
+    font-weight: 400;
+    width: 115px;
+}

@@ -1,0 +1,50 @@
+nav {
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    padding: 24px 8vw;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+nav .home-btn {
+    color: var(--color-primary);
+    font-size: var(--cta);
+    font-weight: 300;
+}
+nav ul {
+    display: flex;
+    gap: 40px;
+}
+nav ul .separator {
+    width: 1px;
+    height: 100%;
+    background-color: var(--color-primary);
+}
+nav ul li a span {
+    font-size: var(--body-1);
+   
+}
+nav ul li a {
+     position: relative;
+}
+nav ul li a span#projects-count {
+    background-color: var(--color-primary);
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(100%, -100%);
+    color: var(--color-bg);
+    font-size: var(--body-4);
+    border-radius: 50%;
+    height: 16px;
+    width: 16px;
+    text-align: center;
+}
+.nav__contact a{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}

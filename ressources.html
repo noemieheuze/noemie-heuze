@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noémie Heuzé | Ressources</title>
+    <meta name="title" content="Noémie Heuzé | Ressources" />
+    <meta name="description" content="Noémie Heuzé, UX-UI Designer." />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/navbar.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
+    <link rel="stylesheet" href="/styles/ressources.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="navbar"></div>
+
+      <main class="ressources-page">
+        <section class="ressources-hero">
+          <h1>Ressources</h1>
+          <ul id="tags-filter" class="tag-list"></ul>
+        </section>
+
+        <!-- conteneur vide, on injectera ici nos sections par JS -->
+        <div id="ressources-sections"></div>
+      </main>
+
+      <div id="footer"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="utils/load-partials.js"></script>
+    <script type="module">
+      import { tags, ressources } from "/utils/data/ressources.js";
+
+      // 1) Rendu des boutons de filtre
+      const tagsContainer = document.getElementById("tags-filter");
+      tags.forEach((tag, i) => {
+        const li = document.createElement("li");
+        if (i === 0) li.classList.add("tag-active");
+        const btn = document.createElement("button");
+        btn.textContent = tag;
+        btn.dataset.tag = tag;
+        li.appendChild(btn);
+        tagsContainer.appendChild(li);
+      });
+
+      // 2) Regrouper les ressources par group
+      const grouped = ressources.reduce((acc, r) => {
+        acc[r.group] = acc[r.group] || [];
+        acc[r.group].push(r);
+        return acc;
+      }, {});
+
+      // 3) Pour chaque groupe, créer une section + initialiser Swiper
+      const sectionsRoot = document.getElementById("ressources-sections");
+      Object.entries(grouped).forEach(([groupName, items]) => {
+        const section = document.createElement("section");
+        section.className = "ressources-section";
+        section.dataset.group = groupName;
+
+        section.innerHTML = `
+        <svg
+            class="dot-separator"
+            width="1352"
+            height="1"
+            viewBox="0 0 1352 1"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              opacity="0.24"
+              y1="0.5"
+              x2="1352"
+              y2="0.5"
+              stroke="#202020"
+              stroke-dasharray="2 2"
+            />
+          </svg>
+    <h2>${groupName}</h2>
+    <div class="ressources-content">
+        <div class="ressources-header">
+            <div class="ressources-pagination"></div>
+        <div class="ressources-controls">
+          <div class="ressources-prev">
+            <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            >
+            <path
+                d="M13.5 4.5L12.4275 5.54475L18.1125 11.25H3V12.75H18.1125L12.4275 18.4298L13.5 19.5L21 12L13.5 4.5Z"
+                fill="#0D26E3"
+            />
+            </svg>
+          </div>
+          <div class="ressources-next">
+            <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            >
+            <path
+                d="M13.5 4.5L12.4275 5.54475L18.1125 11.25H3V12.75H18.1125L12.4275 18.4298L13.5 19.5L21 12L13.5 4.5Z"
+                fill="#0D26E3"
+            />
+            </svg>
+          </div>
+        </div>
+        
+        </div>
+      <div class="swiper ressources-swiper">
+        <div class="swiper-wrapper"></div>
+      </div>
+    </div>
+  `;
+
+        // Injecter les slides
+        const wrapper = section.querySelector(".swiper-wrapper");
+        items.forEach((item) => {
+          const slide = document.createElement("a");
+          slide.className = "swiper-slide ressource-card";
+          slide.href = item.link;
+          slide.innerHTML = `
+      <img src="${item.image}" alt="${item.title}" class="ressource-image"/>
+      <div class="ressource-content">
+        <span class="ressource-category">${item.category}</span>
+        <div>
+            <h3 class="ressource-title">${item.title}</h3>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.5 4.5L12.4275 5.54475L18.1125 11.25H3V12.75H18.1125L12.4275 18.4298L13.5 19.5L21 12L13.5 4.5Z" fill="#0D26E3"/>
+            </svg>
+        </div>
+      <p title="${item.description}" class="ressource-description">${item.description}</p>
+        
+    </div>
+    `;
+          wrapper.appendChild(slide);
+        });
+
+        sectionsRoot.appendChild(section);
+
+        // >========== Solution B ==========<
+
+        // Récupérer directement les éléments
+        const swiperEl = section.querySelector(".swiper");
+        const prevEl = section.querySelector(".ressources-prev");
+        const nextEl = section.querySelector(".ressources-next");
+        const pagEl = section.querySelector(".ressources-pagination");
+
+        // Debug: vérifier que rien n'est null
+        console.log("Swiper for", groupName, {
+          swiperEl,
+          prevEl,
+          nextEl,
+          pagEl,
+        });
+
+        // Initialiser Swiper en passant les éléments
+        new Swiper(swiperEl, {
+          loop: false,
+          slidesPerView: 3,
+          spaceBetween: 24,
+          slidesPerGroup: 1,
+          centeredSlides: false,
+          centerInsufficientSlides: false,
+          watchOverflow: true,
+          navigation: {
+            prevEl,
+            nextEl,
+          },
+          pagination: {
+            el: pagEl,
+            type: "custom",
+            renderCustom: (_s, current, total) => `${current} — ${total}`,
+          },
+        });
+      });
+
+      // 4) Logique de filtre
+      tagsContainer.addEventListener("click", (e) => {
+        if (e.target.nodeName !== "BUTTON") return;
+        tagsContainer
+          .querySelectorAll("li")
+          .forEach((li) => li.classList.remove("tag-active"));
+        const clickedLi = e.target.closest("li");
+        clickedLi.classList.add("tag-active");
+
+        const tag = e.target.dataset.tag;
+        document.querySelectorAll(".ressources-section").forEach((sec) => {
+          sec.style.display =
+            tag === "All" || sec.dataset.group === tag ? "" : "none";
+        });
+      });
+    </script>
+  </body>
+</html>
