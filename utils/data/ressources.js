@@ -19,7 +19,7 @@ export const ressources = [
     title: "Déploiement de Figma Sites 2.0",
     description:
       "La nouvelle version de Figma Sites apporte un éditeur WYSIWYG, des widgets intégrés et un hébergement gratuit pour les projets personnels.",
-    image: "../assets/images/ph-projet.jpg",
+    image: "./assets/images/ph-projet.jpg",
     link: "#",
   },
   {
@@ -29,7 +29,7 @@ export const ressources = [
     title: "Dark Mode : conseils et pièges à éviter",
     description:
       "Un guide détaillé pour réussir l'implémentation du mode sombre tout en conservant l'accessibilité et la lisibilité.",
-    image: "../assets/images/ph-projet.jpg",
+    image: "./assets/images/ph-projet.jpg",
     link: "#",
   },
   {
@@ -39,7 +39,7 @@ export const ressources = [
     title: "Refonte de l'app mobile de MonBanque",
     description:
       "Retour d'expérience sur la refonte UX de l'application de la grande banque française, avec interviews utilisateurs et benchmarks.",
-    image: "../assets/images/ph-projet.jpg",
+    image: "./assets/images/ph-projet.jpg",
     link: "#",
   },
   {
@@ -49,7 +49,7 @@ export const ressources = [
     title: "Refonte de l'app mobile de MonBanque (Suite)",
     description:
       "Approfondissement des tests utilisateurs et itérations de design pour MonBanque.",
-    image: "../assets/images/ph-projet.jpg",
+    image: "./assets/images/ph-projet.jpg",
     link: "#",
   },
   {
@@ -59,7 +59,7 @@ export const ressources = [
     title: "Nouvelles guidelines Apple Human Interface",
     description:
       "Un tour d’horizon des dernières recommandations d’Apple pour iOS et macOS.",
-    image: "../assets/images/ph-projet.jpg",
+    image: "./assets/images/ph-projet.jpg",
     link: "#",
   },
 
