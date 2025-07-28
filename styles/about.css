@@ -94,3 +94,35 @@ opacity: 1;
     font-weight: 300;
     color: var(--color-text);
 }
+
+/* TOOLS */
+.tools-list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+/* INITIATIVES  */
+.initiatives {
+    gap: 40px !important
+}
+.initiatives-list {
+     display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.initiatives-list__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.initiatives-subtitle {
+    color: var(--color-primary);
+    font-size: var(--heading-4);
+    font-weight: 400;
+}
+.initiatives-list-el {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}

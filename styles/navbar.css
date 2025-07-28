@@ -31,20 +31,29 @@ nav ul li a {
      position: relative;
 }
 nav ul li a span#projects-count {
-    background-color: var(--color-primary);
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(100%, -100%);
-    color: var(--color-bg);
-    font-size: var(--body-4);
-    border-radius: 50%;
-    height: 16px;
-    width: 16px;
-    text-align: center;
+    
 }
 .nav__contact a{
     display: flex;
     gap: 16px;
     align-items: center;
+}
+.pill-projects {
+background-color: var(--color-primary);
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(100%, -100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+}
+.pill-projects span {
+color: var(--color-bg);
+    font-size: var(--body-4);
+    transform: translate(0px, 1px);
 }
