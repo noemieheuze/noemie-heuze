@@ -253,7 +253,7 @@
         card.classList.add("project-card");
 
         card.innerHTML = `
-            <img src="${project.image}" alt="${project.title}">
+            <img src="${project.heroImage}" alt="${project.title}">
             <div class="project-card__content">
                 <div class="project-card__title">
                     <h3>${project.title}</h3>
@@ -261,7 +261,7 @@
                     <path d="M13.5 4.5L12.4275 5.54475L18.1125 11.25H3V12.75H18.1125L12.4275 18.4298L13.5 19.5L21 12L13.5 4.5Z" fill="#0D26E3"/>
                     </svg>
                 </div>
-                <p>${project.description}</p>
+                <p>${project.toolsUsed}</p>
             </div>
         `;
 

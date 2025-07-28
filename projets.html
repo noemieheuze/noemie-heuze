@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projet — Noémie Heuzé</title>
+    <meta name="description" content="Détail projet Noémie Heuzé" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/navbar.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
+    <link rel="stylesheet" href="/styles/projets.css" />
+  </head>
+  <body>
+    <div id="navbar"></div>
+
+    <main id="project-main" class="project-page">
+      <section class="project-hero">
+        <h1 id="project-title" class="sizing-bloc"></h1>
+        <img
+          id="project-hero-image"
+          src=""
+          alt=""
+          class="project-hero__image"
+        />
+      </section>
+
+      <div class="project-content">
+        <!-- Context -->
+        <section class="project-step">
+          <h2>Context</h2>
+          <div class="project-step__content" id="project-context"></div>
+        </section>
+
+        <!-- Processus -->
+        <section class="project-process">
+          <h2>Processus</h2>
+          <div id="project-process-list" class="project-process__content"></div>
+        </section>
+
+        <!-- Résultat -->
+        <section class="project-step">
+          <h2>Résultat</h2>
+          <p id="project-result" class="project-step__content"></p>
+        </section>
+
+        <!-- Outils -->
+        <section class="project-step">
+          <h2>Outils utilisés</h2>
+          <ul id="project-tools-list" class="project-step__content"></ul>
+        </section>
+
+        <!-- Autres projets -->
+        <section class="project-other">
+          <h2>Vous pourriez aussi aimer</h2>
+          <div id="project-other-list" class="other-projects"></div>
+        </section>
+      </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script type="module" src="/utils/load-partials.js"></script>
+    <script type="module">
+   // utils/project-init.js
+import { projects } from "/utils/data/projects.js";
+
+// Récupérer le slug depuis le paramètre de requête
+const params = new URLSearchParams(window.location.search);
+const slug = params.get("slug");
+
+// Sélection des éléments du DOM
+const titleEl = document.getElementById("project-title");
+const heroImageEl = document.getElementById("project-hero-image");
+const contextEl = document.getElementById("project-context");
+const processListEl = document.getElementById("project-process-list");
+const resultEl = document.getElementById("project-result");
+const toolsListEl = document.getElementById("project-tools-list");
+const otherListEl = document.getElementById("project-other-list");
+const containerEl = document.getElementById("project-main");
+
+// Trouver le projet
+const project = projects.find((p) => p.slug === slug);
+
+if (!project) {
+  containerEl.innerHTML = `
+    <section class="not-found">
+      <h1>Projet non trouvé</h1>
+      <p>Oups, on n’a pas trouvé ce projet. <a href="/">Retour à l’accueil</a>.</p>
+    </section>
+  `;
+} else {
+  // Hero
+  titleEl.textContent = project.title;
+  heroImageEl.src = project.heroImage;
+  heroImageEl.alt = project.title;
+
+  // Contexte (plusieurs paragraphes)
+  contextEl.innerHTML = "";
+  project.context.forEach((para) => {
+    const p = document.createElement("p");
+    p.textContent = para.trim();
+    contextEl.appendChild(p);
+  });
+
+  // Processus
+  processListEl.innerHTML = "";
+  project.process.forEach((item, i) => {
+    const stepDiv = document.createElement("div");
+    stepDiv.className = "process-step";
+    stepDiv.innerHTML = `
+    <div class="process-step__title"> 
+      <span>0${i + 1}</span>
+      <h3>${item.step}</h3>
+     </div> 
+      <div class="process-description">
+        <p>${item.description}</p>
+      </div>
+    `;
+
+    // Si des images sont définies, on les ajoute DANS la div description
+    if (item.images && item.images.length > 0) {
+      const listDiv = document.createElement("div");
+      listDiv.className = "process-images-list";
+      item.images.forEach((src) => {
+        const img = document.createElement("img");
+        img.src = src;
+        img.alt = item.step;
+        listDiv.appendChild(img);
+      });
+      // Attacher la liste d'images dans la div process-description
+      const descDiv = stepDiv.querySelector(".process-description");
+      descDiv.appendChild(listDiv);
+    }
+
+    processListEl.append(stepDiv);
+  });
+
+  // Résultat
+  resultEl.textContent = project.result.trim();
+
+  // Outils utilisés
+  toolsListEl.innerHTML = "";
+  project.toolsUsed.forEach((tool) => {
+    const li = document.createElement("li");
+    li.textContent = tool;
+    toolsListEl.append(li);
+  });
+
+  // Autres projets
+  otherListEl.innerHTML = "";
+  project.otherProjects.forEach((op) => {
+    const a = document.createElement("a");
+    a.href = op.link;
+    a.className = "other-card";
+    a.innerHTML = `
+      <img src="${op.image}" alt="${op.title}" />
+      <span>${op.title}</span>
+    `;
+    otherListEl.append(a);
+  });
+
+  // Mettre à jour les métadonnées
+  document.title = `${project.title} — Noémie Heuzé`;
+  document
+    .querySelector('meta[name="description"]')
+    .setAttribute("content", project.context.join(" ").slice(0, 150));
+}
+    </script>
+  </body>
+</html>
