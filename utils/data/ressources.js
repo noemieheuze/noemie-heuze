@@ -71,7 +71,7 @@ export const ressources = [
     title: "Maîtriser les Variantes dans Figma",
     description:
       "Tutoriel complet sur l'utilisation des Variantes pour centraliser vos composants et accélérer la phase de prototypage.",
-    image: "../assets/images/ph-projet.jpg",
+    image: "./assets/images/ph-projet.jpg",
     link: "#",
   },
   {
@@ -81,7 +81,7 @@ export const ressources = [
     title: "Automatiser vos tests avec Cypress",
     description:
       "Comment configurer et écrire vos premiers tests Cypress pour assurer la stabilité de votre UI à chaque release.",
-    image: "../assets/images/ph-projet.jpg",
+    image: "./assets/images/ph-projet.jpg",
     link: "#",
   },
   {
@@ -91,7 +91,7 @@ export const ressources = [
     title: "Sketch vs Figma : comparatif 2025",
     description:
       "Un comparatif à jour des fonctionnalités de base, plugins et performances entre Sketch et Figma.",
-    image: "../assets/images/ph-projet.jpg",
+    image: "./assets/images/ph-projet.jpg",
     link: "#",
   },
 
@@ -103,7 +103,7 @@ export const ressources = [
     title: "Couleurs et contrastes : les bonnes pratiques",
     description:
       "Comment choisir une palette de couleurs respectant les normes WCAG 2.1 et garantir la lisibilité pour tous.",
-    image: "../assets/images/ph-projet.jpg",
+    image: "./assets/images/ph-projet.jpg",
     link: "#",
   },
   {
@@ -113,7 +113,7 @@ export const ressources = [
     title: "Détecter et corriger les erreurs ARIA",
     description:
       "Outils et méthodes pour tester vos pages avec NVDA, VoiceOver et s'assurer que tous vos composants sont accessibles.",
-    image: "../assets/images/ph-projet.jpg",
+    image: "./assets/images/ph-projet.jpg",
     link: "#",
   },
   {
@@ -123,7 +123,7 @@ export const ressources = [
     title: "Créer des formulaires accessibles",
     description:
       "Checklist complète pour valider labels, tabindex, messages d'erreur et instructions claires dans vos formulaires web.",
-    image: "../assets/images/ph-projet.jpg",
+    image: "./assets/images/ph-projet.jpg",
     link: "#",
   },
 
@@ -135,7 +135,7 @@ export const ressources = [
     title: "5 tactiques pour booster votre taux de conversion",
     description:
       "Techniques éprouvées de CRO (Conversion Rate Optimization) et A/B testing pour augmenter vos ventes en ligne.",
-    image: "../assets/images/ph-projet.jpg",
+    image: "./assets/images/ph-projet.jpg",
     link: "#",
   },
   {
@@ -145,7 +145,7 @@ export const ressources = [
     title: "Analyser vos funnels avec Google Analytics 4",
     description:
       "Mise en place de rapports personnalisés pour suivre le parcours utilisateur et identifier les points de friction.",
-    image: "../assets/images/ph-projet.jpg",
+    image: "./assets/images/ph-projet.jpg",
     link: "#",
   },
   {
@@ -155,7 +155,7 @@ export const ressources = [
     title: "Monétiser par l'abonnement : étude de cas",
     description:
       "Retour d'expérience sur la transition d'un modèle freemium à un abonnement payant pour une plateforme SaaS.",
-    image: "../assets/images/ph-projet.jpg",
+    image: "./assets/images/ph-projet.jpg",
     link: "#",
   },
 
@@ -167,7 +167,7 @@ export const ressources = [
     title: "Réduire l'empreinte carbone de votre site",
     description:
       "Techniques pour optimiser vos images, minimiser les requêtes et adopter un hébergement éco-responsable.",
-    image: "../assets/images/ph-projet.jpg",
+    image: "./assets/images/ph-projet.jpg",
     link: "#",
   },
   {
@@ -177,7 +177,7 @@ export const ressources = [
     title: "Principes de l'éco-conception numérique",
     description:
       "Réduction des ressources, performance et accessibilité : comment concilier UX et respect de l'environnement.",
-    image: "../assets/images/ph-projet.jpg",
+    image: "./assets/images/ph-projet.jpg",
     link: "#",
   },
   {
@@ -187,7 +187,7 @@ export const ressources = [
     title: "Intégrer la durabilité dans votre roadmap produit",
     description:
       "Exemples concrets d'objectifs et KPI RSE pour vos équipes produit et UX.",
-    image: "../assets/images/ph-projet.jpg",
+    image: "./assets/images/ph-projet.jpg",
     link: "#",
   },
 
@@ -199,7 +199,7 @@ export const ressources = [
     title: "Hébergements low-impact pour vos projets",
     description:
       "Comparatif des hébergeurs verts et astuces pour réduire la consommation serveur de vos applications.",
-    image: "../assets/images/ph-projet.jpg",
+    image: "./assets/images/ph-projet.jpg",
     link: "#",
   },
   {
@@ -209,7 +209,7 @@ export const ressources = [
     title: "Lazy-loading et code splitting éco-friendly",
     description:
       "Adoptez des techniques de chargement conditionnel pour limiter la bande passante et accélérer l'expérience utilisateur.",
-    image: "../assets/images/ph-projet.jpg",
+    image: "./assets/images/ph-projet.jpg",
     link: "#",
   },
   {
@@ -219,7 +219,7 @@ export const ressources = [
     title: "Respecter la norme ISO 14001 en digital",
     description:
       "Comment aligner vos process de développement web avec les exigences environnementales de l'ISO 14001.",
-    image: "../assets/images/ph-projet.jpg",
+    image: "./assets/images/ph-projet.jpg",
     link: "#",
   },
 ];

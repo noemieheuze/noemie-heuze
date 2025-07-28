@@ -120,13 +120,13 @@ export const projects = [
         slug: "foodles",
         title: "Foodles",
         link: "./projets.html?slug=foodles",
-        image: "../assets/images/foodles-thumb.jpg"
+        image: "./assets/images/foodles-thumb.jpg"
       },
       {
         slug: "lyman-abid",
         title: "Lyman Abid",
         link: "./projets.html?slug=lyman-abid",
-        image: "../assets/images/lyman-abid-thumb.jpg"
+        image: "./assets/images/lyman-abid-thumb.jpg"
       }
     ]
   },
@@ -136,7 +136,7 @@ export const projects = [
     slug: "foodles",
     title: "Foodles",
     link: "./projets.html?slug=foodles",
-    heroImage: "../assets/images/foodles-hero.jpg",
+    heroImage: "./assets/images/foodles-hero.jpg",
     context: `
       Foodles est une application mobile de recommandation de restaurants healthy.
       L’enjeu était de créer un filtre avancé et un système de géolocalisation performant.
@@ -146,13 +146,13 @@ export const projects = [
         step: "01 – Benchmark",
         description:
           "Analyse des applications concurrentes pour identifier les fonctionnalités différenciantes.",
-        images: ["../assets/images/foodles-process-benchmark.jpg"]
+        images: ["./assets/images/foodles-process-benchmark.jpg"]
       },
       {
         step: "02 – Tests utilisateurs",
         description:
           "Prototypes en papier testés en conditions réelles pour affiner l’interface.",
-        images: ["../assets/images/foodles-process-tests.jpg"]
+        images: ["./assets/images/foodles-process-tests.jpg"]
       }
     ],
     result: `
@@ -165,19 +165,19 @@ export const projects = [
         slug: "equilibre",
         title: "Équilibre",
         link: "./projets.html?slug=equilibre",
-        image: "../assets/images/equilibre-thumb.jpg"
+        image: "./assets/images/equilibre-thumb.jpg"
       },
       {
         slug: "seconde-peau",
         title: "Seconde Peau",
         link: "./projets.html?slug=seconde-peau",
-        image: "../assets/images/seconde-peau-thumb.jpg"
+        image: "./assets/images/seconde-peau-thumb.jpg"
       },
       {
         slug: "lyman-abid",
         title: "Lyman Abid",
         link: "./projets.html?slug=lyman-abid",
-        image: "../assets/images/lyman-abid-thumb.jpg"
+        image: "./assets/images/lyman-abid-thumb.jpg"
       }
     ]
   },
@@ -187,7 +187,7 @@ export const projects = [
     slug: "lyman-abid",
     title: "Lyman Abid",
     link: "./projets.html?slug=lyman-abid",
-    heroImage: "../assets/images/lyman-abid-hero.jpg",
+    heroImage: "./assets/images/lyman-abid-hero.jpg",
     context: `
       Portfolio en ligne pour le photographe Lyman Abid, mettant en avant ses meilleures
       séries via un système de galerie responsive.
@@ -197,13 +197,13 @@ export const projects = [
         step: "01 – Moodboard",
         description:
           "Sélection des visuels clés et définition de l’ambiance graphique générale.",
-        images: ["../assets/images/lyman-abid-process-mood.jpg"]
+        images: ["./assets/images/lyman-abid-process-mood.jpg"]
       },
       {
         step: "02 – Prototype haute fidélité",
         description:
           "Maquettes Figma validées par le client avant développement front‑end.",
-        images: ["../assets/images/lyman-abid-process-proto.jpg"]
+        images: ["./assets/images/lyman-abid-process-proto.jpg"]
       }
     ],
     result: `
@@ -215,19 +215,19 @@ export const projects = [
         slug: "equilibre",
         title: "Équilibre",
         link: "./projets.html?slug=equilibre",
-        image: "../assets/images/equilibre-thumb.jpg"
+        image: "./assets/images/equilibre-thumb.jpg"
       },
       {
         slug: "seconde-peau",
         title: "Seconde Peau",
         link: "./projets.html?slug=seconde-peau",
-        image: "../assets/images/seconde-peau-thumb.jpg"
+        image: "./assets/images/seconde-peau-thumb.jpg"
       },
       {
         slug: "foodles",
         title: "Foodles",
         link: "./projets.html?slug=foodles",
-        image: "../assets/images/foodles-thumb.jpg"
+        image: "./assets/images/foodles-thumb.jpg"
       }
     ]
   }
