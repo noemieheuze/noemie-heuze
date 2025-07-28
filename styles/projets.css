@@ -65,6 +65,7 @@ display: flex;
 }
 .process-description {
     flex: 1.5;
+    
     font-size: var(--body-1);
   font-weight: 300;
 }
