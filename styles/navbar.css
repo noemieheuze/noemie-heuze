@@ -28,6 +28,15 @@ nav ul .separator {
 nav ul li a span {
   font-size: var(--body-1);
 }
+nav ul li {
+    position: relative;
+}
+nav ul li::after {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 100%;
+}
 nav ul li a {
   position: relative;
 }

@@ -295,6 +295,7 @@ section:not(.hero) h2 {
   border: 1px solid var(--color-primary);
   padding: 4px 16px;
   border-radius: 200px;
+  background-color: var(--color-bg);
 }
 .tag-list li span {
   font-size: var(--body-3);
@@ -498,7 +499,26 @@ section:not(.hero) h2 {
   color: var(--color-primary);
   text-decoration: underline;
 }
-
+.home-about-txt {
+  flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.home-about-txt a {
+  text-decoration: none !important;
+  height: max-content;
+}
+.home-about-txt .cta-default span {
+font-size: var(--cta);
+}
+.home-about-txt .cta-default img {
+  height: 24px;
+  width: 24px;
+}
+.home-about-txt p {
+  flex: none !important;
+}
 /* HOME TESTIMONIAL */
 
 .testimonials-swiper {
