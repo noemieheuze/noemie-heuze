@@ -6,7 +6,7 @@ export const projects = [
     slug: "equilibre",
     title: "Équilibre",
     link: "./projets.html?slug=equilibre",
-    heroImage: "../assets/images/ph-projet.jpg",
+    heroImage: "./assets/images/ph-projet.jpg",
     context: [
       " Application fonctionnelle déployée sur iOS et Android, avec un taux d'engagement de 65 % des utilisateurs actifs mensuels et une réduction de 20 % des plaintes liées aux troubles musculo‑squelettiques.",
        " Application fonctionnelle déployée sur iOS et Android, avec un taux d'engagement de 65 % des utilisateurs actifs mensuels et une réduction de 20 % des plaintes liées aux troubles musculo‑squelettiques."
@@ -22,8 +22,8 @@ export const projects = [
         description:
           "Organisation des fonctionnalités par affinities pour structurer les écrans clés de l'application.",
         images: [
-          "../assets/images/ph-projet.jpg",
-          "../assets/images/ph-projet.jpg"
+          "./assets/images/ph-projet.jpg",
+          "./assets/images/ph-projet.jpg"
         ]
       },
       {
@@ -31,23 +31,23 @@ export const projects = [
         description:
           "Création de trois personas et cartographie de leurs scénarios d’usage dans l’app.",
         images: [
-          "../assets/images/ph-projet.jpg",
-          "../assets/images/ph-projet.jpg"
+          "./assets/images/ph-projet.jpg",
+          "./assets/images/ph-projet.jpg"
         ]
       },
       {
         step: "04 – Architecture de l’information",
         description:
           "Arborescence et flux de navigation validés pour s’assurer d’une expérience fluide.",
-        images: ["../assets/images/ph-projet.jpg"]
+        images: ["./assets/images/ph-projet.jpg"]
       },
       {
         step: "05 – Wireframes",
         description:
           "Esquisses basse fidélité pour valider l’ergonomie et le placement des contenus principaux.",
         images: [
-          "../assets/images/ph-projet.jpg",
-          "../assets/images/ph-projet.jpg"
+          "./assets/images/ph-projet.jpg",
+          "./assets/images/ph-projet.jpg"
         ]
       }
     ],
@@ -62,19 +62,19 @@ export const projects = [
         slug: "seconde-peau",
         title: "Seconde Peau",
         link: "./projets.html?slug=seconde-peau",
-        image: "../assets/images/seconde-peau-thumb.jpg"
+        image: "./assets/images/seconde-peau-thumb.jpg"
       },
       {
         slug: "foodles",
         title: "Foodles",
         link: "./projets.html?slug=foodles",
-        image: "../assets/images/foodles-thumb.jpg"
+        image: "./assets/images/foodles-thumb.jpg"
       },
       {
         slug: "lyman-abid",
         title: "Lyman Abid",
         link: "./projets.html?slug=lyman-abid",
-        image: "../assets/images/lyman-abid-thumb.jpg"
+        image: "./assets/images/lyman-abid-thumb.jpg"
       }
     ]
   },
@@ -84,7 +84,7 @@ export const projects = [
     slug: "seconde-peau",
     title: "Seconde Peau",
     link: "./projets.html?slug=seconde-peau",
-    heroImage: "../assets/images/seconde-peau-hero.jpg",
+    heroImage: "./assets/images/seconde-peau-hero.jpg",
     context: `
       Seconde Peau est une plateforme e‑commerce de vêtements techniques sur mesure.
       L’objectif est de simplifier la configuration des tailles et modèles pour améliorer
@@ -95,13 +95,13 @@ export const projects = [
         step: "01 – Atelier co‑créatif",
         description:
           "Session avec les stylistes et clients pour lister les besoins fonctionnels et esthétiques.",
-        images: ["../assets/images/seconde-peau-process-atelier.jpg"]
+        images: ["./assets/images/seconde-peau-process-atelier.jpg"]
       },
       {
         step: "02 – Prototype rapide",
         description:
           "Wireframes cliquables pour tester le parcours de personnalisation avant le développement.",
-        images: ["../assets/images/seconde-peau-process-proto.jpg"]
+        images: ["./assets/images/seconde-peau-process-proto.jpg"]
       }
     ],
     result: `
@@ -114,7 +114,7 @@ export const projects = [
         slug: "equilibre",
         title: "Équilibre",
         link: "./projets.html?slug=equilibre",
-        image: "../assets/images/equilibre-thumb.jpg"
+        image: "./assets/images/equilibre-thumb.jpg"
       },
       {
         slug: "foodles",
