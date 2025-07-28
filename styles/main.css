@@ -153,7 +153,6 @@ body {
   scroll-behavior: smooth;
   font-family: sans-serif;
   line-height: 1.5;
-  background-color: #fff;
   color: #111;
 }
 
@@ -241,6 +240,7 @@ body {
   font-size: var(--font-size-base);
   color: var(--color-text);
   font-weight: 300;
+  background-color: var(--color-bg);
 }
 .wrapper {
   display: flex;
@@ -310,17 +310,24 @@ section:not(.hero) h2 {
   padding: 12px 24px;
   border-radius: 200px;
   height: max-content;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--color-primary);
 }
 .cta-default span {
   color: var(--color-bg);
   transform: translateY(1px);
 }
 .cta-default div {
-  border: 1px solid var(--color-bg);
+   border-style: solid;
+  border-width: 1px;
+  border-color: var(--color-bg);
   width: 12px;
   height: 12px;
   border-radius: 50%;
 }
+
+
 .cta-white {
   background-color: var(--color-bg) !important;
 }
@@ -356,18 +363,22 @@ section:not(.hero) h2 {
   align-items: center;
   gap: 24px;
 }
-.hero__content h1 div span:nth-of-type(1) {
+.bar {
   display: block;
   width: 100px;
   height: 10px;
   background-color: var(--color-text);
 }
-.business-card {
+.business-card-wrapper {
   position: absolute;
   right: 0;
   bottom: 0;
-  background-color: var(--color-primary);
+  overflow: hidden;
   transform: translateY(-50%);
+}
+.business-card {
+  background-color: var(--color-primary);
+  
   display: flex;
   flex-direction: column;
   gap: 16px;

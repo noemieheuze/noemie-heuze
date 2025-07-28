@@ -24,6 +24,7 @@ window.addEventListener("DOMContentLoaded", () => {
       console.log("projects:", projects);
       countEl.textContent = projects.length;
     }
+    
   });
 
   // Si tu veux faire quelque chose après le footer, tu peux l'écouter aussi :

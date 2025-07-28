@@ -22,12 +22,12 @@
         <section class="home-hero">
           <div class="hero__content">
             <h1>
-              <span>Le design</span>
+              <span class="split">Le design</span>
               <div>
-                <span></span>
-                <span>à la rencontre</span>
+                <span class="bar"></span>
+                <span class="split">à la rencontre</span>
               </div>
-              <span>de la créativité</span>
+              <span class="split">de la créativité</span>
             </h1>
             <ul class="tag-list">
               <li>
@@ -48,13 +48,15 @@
             <div></div>
             <span>Contactez-moi</span>
           </a>
-          <div class="business-card">
-            <img src="assets/images/noemie-card.jpg" alt="Noémie Heuzé" />
-            <div class="business-card__identity">
-              <span>Noémie Heuzé</span>
-              <span>Product Designer</span>
+          <div class="business-card-wrapper">
+            <div class="business-card">
+              <img src="assets/images/noemie-card.jpg" alt="Noémie Heuzé" />
+              <div class="business-card__identity">
+                <span>Noémie Heuzé</span>
+                <span>Product Designer</span>
+              </div>
+              <span class="business-card__status">Disponible</span>
             </div>
-            <span class="business-card__status">Disponible</span>
           </div>
           <div class="scroll-call">
             <div></div>
@@ -238,12 +240,14 @@
       <div id="footer"></div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="./utils/load-partials.js"></script>
     <script type="module">
-      import { projects} from "./utils/data/projects.js";
-      import { testimonials} from "./utils/data/testimonials.js";
-      import { ressources} from "./utils/data/ressources.js";
+      import { projects } from "./utils/data/projects.js";
+      import { testimonials } from "./utils/data/testimonials.js";
+      import { ressources } from "./utils/data/ressources.js";
 
       const projectsList = document.querySelector("#projects-list");
 
@@ -294,9 +298,9 @@
         spaceBetween: 40,
         slidesPerView: "auto",
         speed: 30000,
-        centeredSlides: false,            
-  centerInsufficientSlides: false,  
-  watchOverflow: true,
+        centeredSlides: false,
+        centerInsufficientSlides: false,
+        watchOverflow: true,
         autoplay: {
           delay: 0,
           disableOnInteraction: false,
@@ -329,26 +333,106 @@
         ressourcesList.appendChild(slide);
       });
       const ressourcesSwiper = new Swiper(".ressources-swiper", {
-  loop: false,
-  spaceBetween: 24,
-  slidesPerView: 3,
-  slidesPerGroup: 1,
-  centeredSlides: false,            
-  centerInsufficientSlides: false,  
-  watchOverflow: true,
-  navigation: {
-    nextEl: ".ressources-next",
-    prevEl: ".ressources-prev",
-  },
-  pagination: {
-    el: '.ressources-pagination',
-    type: 'custom',
-    renderCustom: function (swiper, current, total) {
-      return `${current} — ${total}`;
-    }
-  }
-});
+        loop: false,
+        spaceBetween: 24,
+        slidesPerView: 3,
+        slidesPerGroup: 1,
+        centeredSlides: false,
+        centerInsufficientSlides: false,
+        watchOverflow: true,
+        navigation: {
+          nextEl: ".ressources-next",
+          prevEl: ".ressources-prev",
+        },
+        pagination: {
+          el: ".ressources-pagination",
+          type: "custom",
+          renderCustom: function (swiper, current, total) {
+            return `${current} — ${total}`;
+          },
+        },
+      });
       ressourcesSwiper.update();
+    </script>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        const ctasDefault = document.querySelectorAll(".cta-default");
+        const $duration = 0.4;
+
+        ctasDefault.forEach((cta) => {
+          cta.addEventListener("mouseenter", () => {
+            gsap.to(cta, {
+              duration: $duration,
+              backgroundColor: "transparent",
+            });
+            gsap.to(cta.querySelector("span"), {
+              duration: $duration,
+              color: " #0d26e3",
+            });
+            gsap.to(cta.querySelector("div"), {
+              duration: $duration,
+              borderColor: "#0d26e3",
+              backgroundColor: "#0d26e3",
+            });
+          });
+          cta.addEventListener("mouseleave", () => {
+            gsap.to(cta, {
+              duration: $duration,
+              backgroundColor: "#0d26e3",
+            });
+            gsap.to(cta.querySelector("span"), {
+              duration: $duration,
+              color: "var(--color-bg)",
+            });
+            gsap.to(cta.querySelector("div"), {
+              duration: $duration,
+              borderColor: "var(--color-bg)",
+            });
+          });
+        });
+      });
+    </script>
+    <script>
+      setTimeout(() => {
+        gsap.registerPlugin(SplitText);
+        const nav = document.querySelector("nav");
+        console.log(nav);
+        // split elements with the class "split" into words and characters
+        let split = SplitText.create(".split", { type: "lines, words, chars" });
+        const tl = gsap.timeline();
+
+        // now animate the characters in a staggered fashion
+        tl.from(split.lines, {
+          duration: 1,
+          x: -20,
+          autoAlpha: 0.3,
+          stagger: 0.03,
+          ease: "power4.out",
+        })
+          .from(".bar", {
+            width: 0,
+            duration: 1.2,
+            ease: "power4.inOut",
+          })
+          .from(
+            "nav",
+            {
+              yPercent: -100,
+              duration: 1.2,
+              ease: "power4.inOut",
+            },
+            "<"
+          )
+          .from(
+            ".business-card",
+            {
+              xPercent: -100,
+              duration: 1.2,
+              ease: "power4.inOut",
+            },
+            "<"
+          );
+      }, 50);
     </script>
   </body>
 </html>
