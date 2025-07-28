@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projet — Noémie Heuzé</title>
     <meta name="description" content="Détail projet Noémie Heuzé" />
-    <link rel="stylesheet" href="/styles/main.css" />
-    <link rel="stylesheet" href="/styles/navbar.css" />
-    <link rel="stylesheet" href="/styles/footer.css" />
-    <link rel="stylesheet" href="/styles/projets.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./styles/projets.css" />
   </head>
   <body>
     <div id="navbar"></div>
@@ -59,10 +59,10 @@
 
     <div id="footer"></div>
 
-    <script type="module" src="/utils/load-partials.js"></script>
+    <script type="module" src="./utils/load-partials.js"></script>
     <script type="module">
    // utils/project-init.js
-import { projects } from "/utils/data/projects.js";
+import { projects } from "./utils/data/projects.js";
 
 // Récupérer le slug depuis le paramètre de requête
 const params = new URLSearchParams(window.location.search);

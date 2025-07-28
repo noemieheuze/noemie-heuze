@@ -5,7 +5,7 @@ export const projects = [
     id: 1,
     slug: "equilibre",
     title: "Équilibre",
-    link: "/projets.html?slug=equilibre",
+    link: "./projets.html?slug=equilibre",
     heroImage: "../assets/images/ph-projet.jpg",
     context: [
       " Application fonctionnelle déployée sur iOS et Android, avec un taux d'engagement de 65 % des utilisateurs actifs mensuels et une réduction de 20 % des plaintes liées aux troubles musculo‑squelettiques.",
@@ -61,19 +61,19 @@ export const projects = [
       {
         slug: "seconde-peau",
         title: "Seconde Peau",
-        link: "/projets.html?slug=seconde-peau",
+        link: "./projets.html?slug=seconde-peau",
         image: "../assets/images/seconde-peau-thumb.jpg"
       },
       {
         slug: "foodles",
         title: "Foodles",
-        link: "/projets.html?slug=foodles",
+        link: "./projets.html?slug=foodles",
         image: "../assets/images/foodles-thumb.jpg"
       },
       {
         slug: "lyman-abid",
         title: "Lyman Abid",
-        link: "/projets.html?slug=lyman-abid",
+        link: "./projets.html?slug=lyman-abid",
         image: "../assets/images/lyman-abid-thumb.jpg"
       }
     ]
@@ -83,7 +83,7 @@ export const projects = [
     id: 2,
     slug: "seconde-peau",
     title: "Seconde Peau",
-    link: "/projets.html?slug=seconde-peau",
+    link: "./projets.html?slug=seconde-peau",
     heroImage: "../assets/images/seconde-peau-hero.jpg",
     context: `
       Seconde Peau est une plateforme e‑commerce de vêtements techniques sur mesure.
@@ -113,19 +113,19 @@ export const projects = [
       {
         slug: "equilibre",
         title: "Équilibre",
-        link: "/projets.html?slug=equilibre",
+        link: "./projets.html?slug=equilibre",
         image: "../assets/images/equilibre-thumb.jpg"
       },
       {
         slug: "foodles",
         title: "Foodles",
-        link: "/projets.html?slug=foodles",
+        link: "./projets.html?slug=foodles",
         image: "../assets/images/foodles-thumb.jpg"
       },
       {
         slug: "lyman-abid",
         title: "Lyman Abid",
-        link: "/projets.html?slug=lyman-abid",
+        link: "./projets.html?slug=lyman-abid",
         image: "../assets/images/lyman-abid-thumb.jpg"
       }
     ]
@@ -135,7 +135,7 @@ export const projects = [
     id: 3,
     slug: "foodles",
     title: "Foodles",
-    link: "/projets.html?slug=foodles",
+    link: "./projets.html?slug=foodles",
     heroImage: "../assets/images/foodles-hero.jpg",
     context: `
       Foodles est une application mobile de recommandation de restaurants healthy.
@@ -164,19 +164,19 @@ export const projects = [
       {
         slug: "equilibre",
         title: "Équilibre",
-        link: "/projets.html?slug=equilibre",
+        link: "./projets.html?slug=equilibre",
         image: "../assets/images/equilibre-thumb.jpg"
       },
       {
         slug: "seconde-peau",
         title: "Seconde Peau",
-        link: "/projets.html?slug=seconde-peau",
+        link: "./projets.html?slug=seconde-peau",
         image: "../assets/images/seconde-peau-thumb.jpg"
       },
       {
         slug: "lyman-abid",
         title: "Lyman Abid",
-        link: "/projets.html?slug=lyman-abid",
+        link: "./projets.html?slug=lyman-abid",
         image: "../assets/images/lyman-abid-thumb.jpg"
       }
     ]
@@ -186,7 +186,7 @@ export const projects = [
     id: 4,
     slug: "lyman-abid",
     title: "Lyman Abid",
-    link: "/projets.html?slug=lyman-abid",
+    link: "./projets.html?slug=lyman-abid",
     heroImage: "../assets/images/lyman-abid-hero.jpg",
     context: `
       Portfolio en ligne pour le photographe Lyman Abid, mettant en avant ses meilleures
@@ -214,19 +214,19 @@ export const projects = [
       {
         slug: "equilibre",
         title: "Équilibre",
-        link: "/projets.html?slug=equilibre",
+        link: "./projets.html?slug=equilibre",
         image: "../assets/images/equilibre-thumb.jpg"
       },
       {
         slug: "seconde-peau",
         title: "Seconde Peau",
-        link: "/projets.html?slug=seconde-peau",
+        link: "./projets.html?slug=seconde-peau",
         image: "../assets/images/seconde-peau-thumb.jpg"
       },
       {
         slug: "foodles",
         title: "Foodles",
-        link: "/projets.html?slug=foodles",
+        link: "./projets.html?slug=foodles",
         image: "../assets/images/foodles-thumb.jpg"
       }
     ]
