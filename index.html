@@ -16,9 +16,9 @@
   </head>
   <body>
     <div id="smooth-wrapper">
-      <div class="wrapper" id="smooth-content">
-        <div id="navbar"></div>
+      <div id="navbar"></div>
 
+      <div class="wrapper" id="smooth-content">
         <main>
           <section class="home-hero">
             <div class="hero__content">
@@ -116,9 +116,9 @@
                   Je termine actuellement ma licence UX Designer avec
                   <a href="" target="_blank">OpenClassrooms</a>.
                 </p>
-                <a href="./about.html" class="cta-default">
+                <a href="./about.html" class="cta-default cta-white">
                   <span>En savoir plus </span>
-                  <img src="./assets/icones/arrow-white.svg" alt="" />
+                  <img src="./assets/icones/arrow-blue.svg" alt="" />
                 </a>
               </div>
             </div>
@@ -198,8 +198,13 @@
                 stroke-dasharray="2 2"
               />
             </svg>
-
-            <h2>Ressources</h2>
+            <div class="home-ressources-header">
+              <h2>Veille</h2>
+              <a href="./about.html" class="cta-default cta-white">
+                <span>En savoir plus </span>
+                <img src="./assets/icones/arrow-blue.svg" alt="" />
+              </a>
+            </div>
             <div class="ressources-content">
               <div class="ressources-header">
                 <div class="ressources-pagination"></div>
@@ -471,6 +476,30 @@
             },
             "<50%"
           );
+
+        // Navbar animations
+        const lisNav = document.querySelectorAll(
+          "nav ul li:not(.nav__contact)"
+        );
+
+        lisNav.forEach((liNav) => {
+          liNav.addEventListener("mouseenter", () => {
+            gsap.to(liNav, {
+              "--underline-scaleX": 1,
+              duration: 0.6,
+              ease: "power3.out",
+              overwrite: true,
+            });
+          });
+          liNav.addEventListener("mouseleave", () => {
+            gsap.to(liNav, {
+              "--underline-scaleX": 0,
+              duration: 0.2,
+              ease: "linear",
+              overwrite: true,
+            });
+          });
+        });
       }, 50);
     </script>
     <script>

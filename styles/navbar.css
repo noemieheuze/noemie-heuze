@@ -36,6 +36,12 @@ nav ul li::after {
     content: '';
     height: 1px;
     width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-text);
+    transform: scaleX(var(--underline-scaleX));
+    transform-origin: left;
+    pointer-events: none;
 }
 nav ul li a {
   position: relative;
@@ -46,6 +52,7 @@ nav ul li a {
   gap: 16px;
   align-items: center;
 }
+
 .pill-projects {
   background-color: var(--color-primary);
   position: absolute;
