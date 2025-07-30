@@ -136,7 +136,15 @@ export function initAnimations() {
     ease: "power4.inOut",
     delay: 0.3
   })
-   
+   if(document.querySelector('.large-img-appear')) {
+
+    tl.from('.large-img-appear', {
+        yPercent:5,
+        duration: 1.2,
+        autoAlpha: 0,
+        ease:"power4.inout"
+    }, "<")
+   }
     if (isIndex) {
          tl.from(
       ".bar",
@@ -176,6 +184,12 @@ export function initAnimations() {
       },
       "<80%"
     )
+    .from('.home-hero a', {
+        yPercent: -30,
+        duration: 0.8,
+        autoAlpha: 0,
+        ease: "power4.out",
+    },"<20%")
     .from(".scroll-call", {
       duration: 0.6,
       autoAlpha: 0,
@@ -189,7 +203,8 @@ export function initAnimations() {
         ease: "expo.out",
       },
       "<50%"
-    );
+    )
+
 }
     
 
@@ -241,6 +256,25 @@ export function initAnimations() {
       });
     }
   }
+
+// Appartions scrolltrigger
+
+const sections = document.querySelectorAll("section");
+
+sections.forEach((section) => {
+  gsap.from(section, {
+    y: 50,
+    autoAlpha: 0,
+    duration: 0.6,
+    scrollTrigger: {
+      trigger: section,
+      scroller: "#smooth-wrapper",
+      start: "top bottom",
+      toggleActions: "play none none reverse",
+      markers: false,
+    },
+  });
+});
 
 
 }

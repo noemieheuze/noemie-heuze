@@ -271,6 +271,7 @@ main {
   justify-content: flex-end;
   gap: 24px;
   height: calc(100dvh - 75px);
+  overflow: hidden;
 }
 
 .hero h1 {
@@ -320,6 +321,9 @@ section:not(.hero) h2 {
   border-width: 1px;
   border-color: var(--color-primary);
 }
+a.cta-default {
+  text-decoration: none !important;
+}
 .cta-default span {
   color: var(--color-bg);
   transform: translateY(1px);
@@ -347,6 +351,9 @@ section:not(.hero) h2 {
   border-style: solid;
   border-width: 1px;
   border-color: var(--color-primary);
+}
+a.cta-white {
+  text-decoration: none !important;
 }
 .cta-white span {
   color: var(--color-primary);
@@ -533,7 +540,7 @@ section:not(.hero) h2 {
   gap: 40px;
 }
 .home-about-txt a {
-  text-decoration: none !important;
+  text-decoration: underline ;
   height: max-content;
 }
 .home-about-txt .cta-default span {

@@ -130,6 +130,8 @@ main {
 }
 .other-card__thumb {
   height: 125px;
+  width: 125px;
+  object-fit: cover;
 }
 
 

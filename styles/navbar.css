@@ -11,10 +11,8 @@ nav {
   background-color: var(--color-bg);
 }
 
-nav .home-btn {
-  color: var(--color-primary);
-  font-size: var(--cta);
-  font-weight: 300;
+nav .home-btn img {
+  height: 16px;
 }
 nav ul {
   display: flex;
@@ -29,19 +27,19 @@ nav ul li a span {
   font-size: var(--body-1);
 }
 nav ul li {
-    position: relative;
+  position: relative;
 }
 nav ul li::after {
-    position: absolute;
-    content: '';
-    height: 1px;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    background-color: var(--color-text);
-    transform: scaleX(var(--underline-scaleX));
-    transform-origin: left;
-    pointer-events: none;
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-text);
+  transform: scaleX(var(--underline-scaleX));
+  transform-origin: left;
+  pointer-events: none;
 }
 nav ul li a {
   position: relative;

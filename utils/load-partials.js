@@ -1,5 +1,12 @@
 import { projects } from "./data/projects.js";
-import { initAnimations } from "./initAnimations.js"; // ✅ importer l’init
+import { initAnimations } from "./initAnimations.js"; 
+
+function injectProjectCount() {
+  const el = document.getElementById("projects-count");
+  if (el) {
+    el.textContent = projects.length;
+  }
+}
 
 function loadPartial(id, url) {
   return fetch(url)
@@ -19,11 +26,8 @@ window.addEventListener("DOMContentLoaded", () => {
   // Attendre que les deux soient finis, puis lancer les animations
   Promise.all([navbarPromise, footerPromise]).then(() => {
     initAnimations(); // ✅ maintenant sûr que navbar & footer sont là
+// injectProjectCount();
 
-    // Optionnel : mise à jour du compteur
-    const countEl = document.getElementById("projects-count");
- 
-      countEl.textContent = projects.length;
     
   });
 });

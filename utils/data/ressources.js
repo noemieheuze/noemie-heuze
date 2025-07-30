@@ -54,6 +54,17 @@ export const ressources = [
     image: "./assets/images/veille-actualite-uxcollective.jpg",
     link: "https://uxdesign.cc/the-ux-of-ubers-new-policy-doesn-t-work-d1b9f251cf41",
   },
+  {
+    id: 4,
+    group: "Actualité UX",
+    category: "UX Collective",
+    title:
+      "L'IA ne tuera pas l'UX, nous le ferons",
+    description:
+      "Il est temps que nous cessions de blâmer les outils et que nous commencions à nous poser de meilleures questions sur la façon dont nous travaillons, sur ce que nous valorisons et sur la façon dont nous faisons à nouveau de la place à l’innovation.",
+    image: "./assets/images/veille-actualite-uxcollective2.jpg",
+    link: "https://uxdesign.cc/ai-wont-kill-ux-we-will-6ab68db1f1e3",
+  },
 
   // Outils UX
   {
@@ -83,9 +94,39 @@ export const ressources = [
     category: "UX Tools",
     title: "Base de données d'outils de conception",
     description:
-      "Données issues de notre enquête annuelle. Découvrez les tendances en hausse, en baisse et les notes les plus élevées attribuées par les designers.",
+      "Figma a récemment introduit un vérificateur de contraste de couleur intégré , une avancée majeure pour une conception accessible plus intégrée et fluide. Plus besoin de jongler entre les plugins : testez désormais le contraste directement pendant la conception.",
     image: "./assets/images/veille-outils-uxtools.jpg",
     link: "https://www.uxtools.co/tools/design",
+  },
+  {
+    id: 8,
+    group: "Outils UX",
+    category: "Design Bootcamp",
+    title: "Tester le contraste des couleurs dans Figma : un petit détail qui peut fausser vos résultats",
+    description:
+      "Données issues de notre enquête annuelle. Découvrez les tendances en hausse, en baisse et les notes les plus élevées attribuées par les designers.",
+    image: "./assets/images/veille-outils-designbootcamp.jpg",
+    link: "https://medium.com/design-bootcamp/testing-color-contrast-in-figma-a-small-detail-that-can-skew-your-results-0af5251282f3",
+  },
+  {
+    id: 8,
+    group: "Outils UX",
+    category: "Figma",
+    title: "Vérification du contraste des couleurs pour l'accessibilité dans Figma",
+    description:
+      "Concevoir en tenant compte de l'accessibilité est désormais bien plus simple. Les concepteurs peuvent désormais vérifier que les couleurs de premier plan du texte et des graphiques respectent les normes de contraste AA ou AAA WCAG. Découvrez comment cette fonctionnalité peut non seulement vous aider à choisir des couleurs accessibles dans votre conception, mais aussi à corriger automatiquement les contrastes non conformes en un clic.",
+    image: "./assets/images/veille-outils-figma2.jpg",
+    link: "https://www.youtube.com/watch?v=5uvU1-2xq3U",
+  },
+  {
+    id: 8,
+    group: "Outils UX",
+    category: "UX Collective",
+    title: "Figma Make est-il prêt pour le transfert des développeurs ?",
+    description:
+      "Outils de conception à code qui génèrent du code propre.",
+    image: "./assets/images/veille-outils-uxcollective.jpg",
+    link: "https://uxdesign.cc/is-figma-make-ready-for-dev-handoff-9fe2594630e3",
   },
 
   // Méthode UX
@@ -137,11 +178,20 @@ export const ressources = [
   {
     id: 11,
     group: "Accessibilité UX",
-    category: "Source",
-    title: "Titre",
-    description: "Résumé",
-    image: "./assets/images/ph-projet.jpg",
-    link: "#",
+    category: "Collective UX",
+    title: "Prêt ou pas, l'EAA est là",
+    description: "Stratégies pour une expérience utilisateur à l'épreuve du temps et conforme aux normes juridiques de l'UE",
+    image: "./assets/images/veille-accessibilite-uxcollective.jpg",
+    link: "https://uxdesign.cc/ready-or-not-the-eaa-is-here-d9589dfac2fc",
+  },
+  {
+    id: 11,
+    group: "Accessibilité UX",
+    category: "Smashing Magazine",
+    title: "Modèle de notation proposé par WCAG 3.0 : un changement dans l'évaluation de l'accessibilité",
+    description: "Les WCAG évoluent. Depuis 1999, les Règles pour l'accessibilité des contenus Web définissent l'accessibilité de manière binaire : soit un critère de réussite est rempli, soit il ne l'est pas. Mais l'expérience utilisateur est rarement aussi simple. Les WCAG 3.0 repensent le modèle, privilégiant la convivialité à la conformité et mettant l'accent sur la qualité de l'accès plutôt que sur la simple présence de fonctionnalités. Serait-ce le début d'une nouvelle ère en matière d'accessibilité ?",
+    image: "./assets/images/veille-accessibilite-smashingmagazine.jpg",
+    link: "https://www.smashingmagazine.com/2025/05/wcag-3-proposed-scoring-model-shift-accessibility-evaluation/",
   },
 
   // Business & Marketing
@@ -192,11 +242,11 @@ export const ressources = [
   {
     id: 19,
     group: "Éco-Développement",
-    category: "Source",
-    title: "Titre",
-    description: "Résumé",
-    image: "./assets/images/ph-projet.jpg",
-    link: "#",
+    category: "Parlons Design - Lee Podcast des Products Designers",
+    title: "Guide : l'éco-conception dans le numérique avec Christophe Clouzeau - Podcast Product Design",
+    description: "Intégrer l'éco-conception dans nos pratiques de product design est un enjeu clé. Cristophe Clouzeau nous éclaire avec des pistes concrètes pour faire nos premiers pas...",
+    image: "./assets/images/veille-ecodeveloppement-parlonsdesign.jpg",
+    link: "https://youtu.be/uFGE5HRO_kU?si=ygOASmkX2IeANJCi",
   },
 
   // Durabilité
@@ -208,5 +258,23 @@ export const ressources = [
     description: "29 lignes directrices de conception pour améliorer les expériences numériques pour tous les utilisateurs et l'environnement tout en aidant les gens à faire des choix plus durables.",
     image: "./assets/images/veille-durabilite-sustainablewebdesign.jpg",
     link: "https://sustainablewebdesign.org/guideline-categories/user-experience-design/",
+  },
+  {
+    id: 16,
+    group: "Durabilité",
+    category: "Un poil d'UX",
+    title: "Le design responsable, avec Karl Pineau (Designers Éthiques)",
+    description: "Dans ce nouvel épisode, nous accueillons Karl Pineau ! Le sujet du jour est : Le design responsable (implications, enjeux, etc).",
+    image: "./assets/images/veille-durabilite-unpoildux.jpg",
+    link: "https://open.spotify.com/episode/1HAErXauphse5apVVH9FCg?si=J4EiU_SQRvOpaLocYjk3pw&nd=1&dlsi=81db0dc756344bd2",
+  },
+  {
+    id: 16,
+    group: "Durabilité",
+    category: "UX Collective",
+    title: "Pouvons-nous réellement concevoir pour la durabilité ?",
+    description: "4 stratégies pour améliorer l’éco-responsabilité d’un produit sans perdre en utilité.",
+    image: "./assets/images/veille-durabilite-uxcollective.jpg",
+    link: "https://uxdesign.cc/can-we-actually-design-for-sustainability-ef784ba06ad2",
   },
 ];
