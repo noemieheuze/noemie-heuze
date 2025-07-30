@@ -19,7 +19,7 @@ export const ressources = [
     category: "ContentSquare",
     title:
       "La Lettre de l’Expérience Digitale – juin 2025 : UX, IA, product analytics : les signaux faibles à capter cet été",
-    description: "Résumé",
+    description: "Dans cette newsletter, on parle aussi d’achats dopés à l’IA, d’A/B testing bien ciblé, et de l’impact très réel de l’intelligence artificielle dans le quotidien des cadres. ",
     image: "./assets/images/veille-actualite-contentsquare.jpg",
     link: "https://contentsquare.com/fr-fr/blog/newsletter-actualite-digitale-juin-2025/",
   },
@@ -216,15 +216,6 @@ export const ressources = [
       "Une multitude d'outils permettent de soutenir la stratégie d'inbound marketing d'une entreprise. Ces outils d'automatisation offrent notamment l'avantage du gain de temps, un atout de taille pour accélérer sa croissance.",
     image: "./assets/images/veille-businessetmarketing-hubspot.jpg",
     link: "https://blog.hubspot.fr/marketing/elements-outils-inbound-marketing?hubs_content=blog.hubspot.fr/marketing&hubs_content-cta=null&hubs_post-cta=blognavcard-marketing",
-  },
-  {
-    id: 14,
-    group: "Business & Marketing",
-    category: "Source",
-    title: "Titre",
-    description: "Résumé",
-    image: "./assets/images/ph-projet.jpg",
-    link: "#",
   },
 
   // Éco-Développement
