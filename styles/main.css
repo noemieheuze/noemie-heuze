@@ -146,7 +146,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+html {
+  scroll-behavior: auto !important;
+}
 html,
 body {
   height: 100%;
@@ -270,6 +272,7 @@ main {
   gap: 24px;
   height: calc(100dvh - 75px);
 }
+
 .hero h1 {
   font-size: var(--heading-1);
   font-weight: 400;
@@ -330,16 +333,36 @@ section:not(.hero) h2 {
   border-radius: 50%;
 }
 .cta-default img {
-height: 24px;
+  height: 24px;
 }
 .cta-white {
-  background-color: var(--color-bg) !important;
+  background-color: var(--color-bg);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: max-content;
+  padding: 12px 24px;
+  border-radius: 200px;
+  height: max-content;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--color-primary);
 }
 .cta-white span {
-  color: var(--color-primary) !important;
+  color: var(--color-primary);
+  transform: translateY(1px);
 }
 .cta-white div {
-  border: 1px solid var(--color-primary) !important;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--color-primary);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.cta-white svg {
+  height: 24px;
+  width: 24px;
 }
 .swiper {
   margin: 0 !important;
@@ -372,6 +395,7 @@ height: 24px;
   width: 100px;
   height: 10px;
   background-color: var(--color-text);
+  transform: translateY(-14px);
 }
 .business-card-wrapper {
   position: absolute;
@@ -544,6 +568,10 @@ height: 24px;
 .testimonial-message {
   background-color: var(--body-1);
   font-weight: 400;
+   display: -webkit-box;
+  -webkit-line-clamp: 9;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .testimonial-footer {
   display: flex;
@@ -621,14 +649,19 @@ height: 24px;
 }
 .ressource-content div {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
 }
 .ressource-content div svg {
   width: 24px;
   height: 24px;
+  flex: none;
+  margin-bottom: 9px;
 }
 .ressource-title {
   font-size: var(--heading-4);
+  font-weight: 400;
   max-width: calc(100% - 24px);
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -659,6 +692,7 @@ height: 24px;
   display: flex;
   gap: 16px;
 }
+
 .ressources-prev,
 .ressources-next {
   border: 1px solid var(--color-primary);
@@ -668,6 +702,7 @@ height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 .ressources-prev {
   transform: rotate(180deg);

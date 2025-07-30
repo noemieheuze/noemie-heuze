@@ -7,8 +7,8 @@ export const tags = [
   "Méthode UX",
   "Accessibilité UX",
   "Business & Marketing",
-  "Durabilité",
   "Éco-Développement",
+  "Durabilité",
 ];
 
 export const ressources = [
@@ -53,15 +53,6 @@ export const ressources = [
       "Pourquoi Uber a mis en place le choix du sexe du chauffeur et pourquoi cela ne fonctionne pas.",
     image: "./assets/images/veille-actualite-uxcollective.jpg",
     link: "https://uxdesign.cc/the-ux-of-ubers-new-policy-doesn-t-work-d1b9f251cf41",
-  },
-  {
-    id: 5,
-    group: "Actualité UX",
-    category: "Source",
-    title: "Titre",
-    description: "Résumé",
-    image: "./assets/images/ph-projet.jpg",
-    link: "#",
   },
 
   // Outils UX
@@ -186,35 +177,6 @@ export const ressources = [
     link: "#",
   },
 
-  // Durabilité
-  {
-    id: 15,
-    group: "Durabilité",
-    category: "Source",
-    title: "Titre",
-    description: "Résumé",
-    image: "./assets/images/ph-projet.jpg",
-    link: "https://www.greenit.fr/2025/06/23/le-collectif-green-it-publie-la-5eme-edition-du-referentiel-ecoconception-web-les-115-bonnes-pratiques/",
-  },
-  {
-    id: 16,
-    group: "Durabilité",
-    category: "Source",
-    title: "Titre",
-    description: "Résumé",
-    image: "./assets/images/ph-projet.jpg",
-    link: "#",
-  },
-  {
-    id: 17,
-    group: "Durabilité",
-    category: "Source",
-    title: "Titre",
-    description: "Résumé",
-    image: "./assets/images/ph-projet.jpg",
-    link: "#",
-  },
-
   // Éco-Développement
   {
     id: 18,
@@ -235,5 +197,16 @@ export const ressources = [
     description: "Résumé",
     image: "./assets/images/ph-projet.jpg",
     link: "#",
+  },
+
+  // Durabilité
+  {
+    id: 16,
+    group: "Durabilité",
+    category: "Sustainable Web Design",
+    title: "Conception UX",
+    description: "29 lignes directrices de conception pour améliorer les expériences numériques pour tous les utilisateurs et l'environnement tout en aidant les gens à faire des choix plus durables.",
+    image: "./assets/images/veille-durabilite-sustainablewebdesign.jpg",
+    link: "https://sustainablewebdesign.org/guideline-categories/user-experience-design/",
   },
 ];

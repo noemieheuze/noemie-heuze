@@ -1,7 +1,7 @@
 import { projects } from "./data/projects.js";
+import { initAnimations } from "./initAnimations.js"; // ✅ importer l’init
 
 function loadPartial(id, url) {
-  // On renvoie la Promise, pour pouvoir chaîner un .then
   return fetch(url)
     .then((res) => res.text())
     .then((html) => {
@@ -13,22 +13,19 @@ function loadPartial(id, url) {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-  // On lance les deux injections et on attend que celle du 'navbar' soit finie
   const navbarPromise = loadPartial("navbar", "navbar.html");
   const footerPromise = loadPartial("footer", "footer.html");
 
-  // Quand la navbar est injectée, on peut mettre à jour le counter
-  navbarPromise.then(() => {
+  // Attendre que les deux soient finis, puis lancer les animations
+  Promise.all([navbarPromise, footerPromise]).then(() => {
+    initAnimations(); // ✅ maintenant sûr que navbar & footer sont là
+
+    // Optionnel : mise à jour du compteur
     const countEl = document.getElementById("projects-count");
-    if (countEl) {
-      console.log("projects:", projects);
+ 
       countEl.textContent = projects.length;
-    }
     
   });
-
-  // Si tu veux faire quelque chose après le footer, tu peux l'écouter aussi :
-  // footerPromise.then(() => { /* … */ });
 });
 
 export default loadPartial;

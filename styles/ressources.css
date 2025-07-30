@@ -15,9 +15,11 @@ main {
 }
 .tag-list#tags-filter button {
   color: var(--color-text);
+  padding: 4px 16px;
 }
 .tag-list#tags-filter li {
   border: 1px solid var(--color-text);
+  padding: 0 !important;
 }
 .tag-active {
   background-color: var(--color-primary) !important;
@@ -35,6 +37,9 @@ main {
   display: flex;
   flex-direction: column;
   gap: 40px;
+}
+.ressources-section h2 {
+  margin-top: 16px;
 }
 .ressources-content {
   display: flex;

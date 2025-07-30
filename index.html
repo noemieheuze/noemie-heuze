@@ -116,9 +116,20 @@
                   Je termine actuellement ma licence UX Designer avec
                   <a href="" target="_blank">OpenClassrooms</a>.
                 </p>
-                <a href="./about.html" class="cta-default cta-white">
+                <a href="./about.html" class="cta-white">
                   <span>En savoir plus </span>
-                  <img src="./assets/icones/arrow-blue.svg" alt="" />
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M22.5 7.5L20.7125 9.24125L30.1875 18.75H5V21.25H30.1875L20.7125 30.7162L22.5 32.5L35 20L22.5 7.5Z"
+                      fill="#0D26E3"
+                    />
+                  </svg>
                 </a>
               </div>
             </div>
@@ -200,9 +211,20 @@
             </svg>
             <div class="home-ressources-header">
               <h2>Veille</h2>
-              <a href="./about.html" class="cta-default cta-white">
+              <a href="./ressources.html" class="cta-white">
                 <span>En savoir plus </span>
-                <img src="./assets/icones/arrow-blue.svg" alt="" />
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22.5 7.5L20.7125 9.24125L30.1875 18.75H5V21.25H30.1875L20.7125 30.7162L22.5 32.5L35 20L22.5 7.5Z"
+                    fill="#0D26E3"
+                  />
+                </svg>
               </a>
             </div>
             <div class="ressources-content">
@@ -294,7 +316,7 @@
         card.classList.add("swiper-slide", "testimonial-card");
 
         card.innerHTML = `
-            <p class="testimonial-message">" ${testimonial.message} "</p>
+            <p class="testimonial-message" title="${testimonial.message}">"${testimonial.message}"</p>
 
             <div class="testimonial-footer">
             <img src="${testimonial.image}" alt="Photo de ${testimonial.name}" class="testimonial-avatar" />
@@ -369,146 +391,6 @@
       });
       ressourcesSwiper.update();
     </script>
-    <script>
-      window.addEventListener("DOMContentLoaded", () => {
-        const ctasDefault = document.querySelectorAll(".cta-default");
-        const $duration = 0.4;
 
-        ctasDefault.forEach((cta) => {
-          cta.addEventListener("mouseenter", () => {
-            gsap.to(cta, {
-              duration: $duration,
-              backgroundColor: "transparent",
-            });
-            gsap.to(cta.querySelector("span"), {
-              duration: $duration,
-              color: " #0d26e3",
-            });
-            gsap.to(cta.querySelector("div"), {
-              duration: $duration,
-              borderColor: "#0d26e3",
-              backgroundColor: "#0d26e3",
-            });
-          });
-          cta.addEventListener("mouseleave", () => {
-            gsap.to(cta, {
-              duration: $duration,
-              backgroundColor: "#0d26e3",
-            });
-            gsap.to(cta.querySelector("span"), {
-              duration: $duration,
-              color: "var(--color-bg)",
-            });
-            gsap.to(cta.querySelector("div"), {
-              duration: $duration,
-              borderColor: "var(--color-bg)",
-            });
-          });
-        });
-      });
-    </script>
-    <script>
-      setTimeout(() => {
-        gsap.registerPlugin(SplitText);
-        const nav = document.querySelector("nav");
-        console.log(nav);
-        // split elements with the class "split" into words and characters
-        let split = SplitText.create(".split", { type: "lines, words, chars" });
-        const tl = gsap.timeline();
-
-        // now animate the characters in a staggered fashion
-        tl.from(split.lines, {
-          duration: 1,
-          x: -20,
-          autoAlpha: 0.3,
-          stagger: 0.03,
-          ease: "power4.out",
-        })
-          .from(
-            ".bar",
-            {
-              width: 0,
-              duration: 1.2,
-              ease: "power4.inOut",
-            },
-            "<80%"
-          )
-          .from(
-            "nav",
-            {
-              yPercent: -100,
-              duration: 1.2,
-              ease: "power4.inOut",
-            },
-            "<"
-          )
-          .from(
-            ".business-card",
-            {
-              xPercent: -100,
-              duration: 1.2,
-              ease: "power4.inOut",
-            },
-            "<"
-          )
-          .from(
-            ".tag-list li",
-            {
-              yPercent: -30,
-              duration: 0.8,
-              stagger: 0.05,
-              autoAlpha: 0,
-              ease: "power4.out",
-            },
-            "<80%"
-          )
-          .from(".scroll-call", {
-            duration: 0.6,
-            autoAlpha: 0,
-          })
-          .to(
-            ".scroll-call div",
-            {
-              duration: 3,
-              yPercent: 200,
-              repeat: -1,
-              ease: "expo.out",
-            },
-            "<50%"
-          );
-
-        // Navbar animations
-        const lisNav = document.querySelectorAll(
-          "nav ul li:not(.nav__contact)"
-        );
-
-        lisNav.forEach((liNav) => {
-          liNav.addEventListener("mouseenter", () => {
-            gsap.to(liNav, {
-              "--underline-scaleX": 1,
-              duration: 0.6,
-              ease: "power3.out",
-              overwrite: true,
-            });
-          });
-          liNav.addEventListener("mouseleave", () => {
-            gsap.to(liNav, {
-              "--underline-scaleX": 0,
-              duration: 0.2,
-              ease: "linear",
-              overwrite: true,
-            });
-          });
-        });
-      }, 50);
-    </script>
-    <script>
-      gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-      ScrollSmoother.create({
-        smooth: 1,
-        effects: true,
-        smoothTouch: 0.1,
-      });
-    </script>
   </body>
 </html>

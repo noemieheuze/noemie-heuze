@@ -21,16 +21,51 @@
 
       <main class="ressources-page">
         <section class="ressources-hero">
-          <h1>Ressources</h1>
+          <h1 class="split">Veille</h1>
           <ul id="tags-filter" class="tag-list"></ul>
         </section>
 
         <!-- conteneur vide, on injectera ici nos sections par JS -->
         <div id="ressources-sections"></div>
+
+        <section>
+            <svg
+              class="dot-separator"
+              width="1352"
+              height="1"
+              viewBox="0 0 1352 1"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                opacity="0.24"
+                y1="0.5"
+                x2="1352"
+                y2="0.5"
+                stroke="#0d26e3"
+                stroke-dasharray="2 2"
+              />
+            </svg>
+            <div class="home-proposal">
+              <div>
+                <p>Vous avez un projet ?</p>
+                <p>Et si on en parlait ?</p>
+                <a href="./contact.html" class="cta-default">
+                  <div></div>
+                  <span>Contactez-moi</span>
+                </a>
+              </div>
+            </div>
+          </section>
       </main>
 
       <div id="footer"></div>
     </div>
+
+     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="utils/load-partials.js"></script>
     <script type="module">
@@ -184,21 +219,53 @@
         });
       });
 
-      // 4) Logique de filtre
-      tagsContainer.addEventListener("click", (e) => {
-        if (e.target.nodeName !== "BUTTON") return;
-        tagsContainer
-          .querySelectorAll("li")
-          .forEach((li) => li.classList.remove("tag-active"));
-        const clickedLi = e.target.closest("li");
-        clickedLi.classList.add("tag-active");
 
-        const tag = e.target.dataset.tag;
-        document.querySelectorAll(".ressources-section").forEach((sec) => {
-          sec.style.display =
-            tag === "All" || sec.dataset.group === tag ? "" : "none";
-        });
-      });
+tagsContainer.addEventListener("click", (e) => {
+  if (e.target.nodeName !== "BUTTON") return;
+
+  // Toggle active class
+  tagsContainer
+    .querySelectorAll("li")
+    .forEach((li) => li.classList.remove("tag-active"));
+  const clickedLi = e.target.closest("li");
+  clickedLi.classList.add("tag-active");
+
+  const tag = e.target.dataset.tag;
+  const sections = document.querySelectorAll(".ressources-section");
+
+  // Cacher toutes les sections
+  sections.forEach((sec) => {
+    sec.style.display =
+      tag === "All" || sec.dataset.group === tag ? "block" : "none";
+  });
+
+  // Filtrer celles à animer
+  const visibleSections = Array.from(sections).filter(
+    (sec) => sec.style.display === "block"
+  );
+
+  // 1. Récupérer toutes les cartes à animer
+let visibleCards = [];
+
+visibleSections.forEach((section) => {
+  const cards = Array.from(section.querySelectorAll(".ressource-card"));
+  visibleCards.push(...cards); // on ajoute toutes les cartes à une liste commune
+});
+
+// 2. Reset avant anim
+gsap.set(visibleCards, { autoAlpha: 0, y: 30 });
+
+// 3. Animation GSAP
+gsap.to(visibleCards, {
+  autoAlpha: 1,
+  y: 0,
+  duration: 0.6,
+  ease: "elastic.out(1,0.75)",
+  stagger: 0.1,
+});
+
+});
+
     </script>
   </body>
 </html>
